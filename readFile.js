@@ -1,6 +1,6 @@
-const ExcelJS = require('exceljs');
+import ExcelJS from 'exceljs';
 
-async function readExcelFile(filePath) {
+export async function readExcelFile(filePath) {
   try {
     const workbook = new ExcelJS.Workbook();
     await workbook.xlsx.readFile(filePath);
@@ -23,4 +23,4 @@ async function readExcelFile(filePath) {
   }
 }
 
-module.exports = {readExcelFile};
+// module.exports = {readExcelFile};
