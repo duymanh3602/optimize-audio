@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const fs = require('fs');
+import fetch from 'node-fetch';
+import fs from 'fs';
 
 async function fetchAudioData(url, filePath) {
   try {
@@ -17,5 +17,6 @@ async function fetchAudioData(url, filePath) {
 const audioUrl = 'https://img.hoclieu.vn/ktdg/audios/1hHAXcNR7Vl62-SE27R0VItx-iPRN_tWOEIlklcMMVFY_HLTMTA4.1/u7_614.mp3';
 const parts = audioUrl.split("/");
 const lastPart = parts[parts.length - 1];
+console.log(lastPart);
 const savePath = './optimized/' + lastPart;
 fetchAudioData(audioUrl, savePath);
