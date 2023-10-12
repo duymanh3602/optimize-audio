@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
-import ffmpeg from 'fluent-ffmpeg';
+// import ffmpeg from 'fluent-ffmpeg';
+import ffmpeg from './ffmpeg.js';
 
 export async function fetchAudioData(url) {
   const parts = url.split("/");
@@ -20,6 +21,8 @@ export async function fetchAudioData(url) {
   .then(buffer => {
     fs.writeFileSync(dataPath, buffer);
 
+    console.log(dataPath);
+
     ffmpeg(dataPath)
       .audioBitrate('96k')
       .save(optimizedPath)
@@ -27,13 +30,11 @@ export async function fetchAudioData(url) {
         console.log('Optimized: ' + fileName);
       })
       .on('error', (error) => {
-        console.error('Error: ' + fileName);
+        console.error('Error: ' + fileName + ' - ' + error);
       });
   })
   .catch(error => {
     console.error('Error fetching audio file: ', fileName);
   });
 }
-
-// module.exports = {fetchAudioData};
 
