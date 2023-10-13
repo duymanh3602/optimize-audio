@@ -20,8 +20,6 @@ export async function fetchAudioData(url) {
   .then(buffer => {
     fs.writeFileSync(dataPath, buffer);
 
-    console.log(dataPath);
-
     ffmpeg(dataPath)
       .audioBitrate('96k')
       .save(optimizedPath)
