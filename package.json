@@ -2,7 +2,8 @@
   "dependencies": {
     "exceljs": "^4.3.0",
     "fluent-ffmpeg": "^2.1.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "rimraf": "^5.0.5"
   },
   "type": "module"
 }
