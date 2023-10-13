@@ -2,5 +2,6 @@
 
 ## Run command
 + Cài thư viện: `yarn`
-+ Thiết lập file excel
-+ Chạy lệnh: `node main.js <excel file path>`
++ Thiết lập file txt
++ Chạy lệnh: `node main.js <txt file path> <chunkSize>`
++ Mặc định không nhập, chunkSize là 10
