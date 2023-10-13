@@ -1,6 +1,5 @@
 import { readExcelFile } from './readFile.js';
 import { fetchAudioData } from './fetchData.js';
-// import { saveExcelFile } from './saveLogData.js';
 
 const args = process.argv.slice(2);
 const excelFilePath = args[0];

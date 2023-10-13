@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
-// import ffmpeg from 'fluent-ffmpeg';
 import ffmpeg from './ffmpeg.js';
 
 export async function fetchAudioData(url) {

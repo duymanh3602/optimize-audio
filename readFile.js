@@ -22,5 +22,3 @@ export async function readExcelFile(filePath) {
     return null;
   }
 }
-
-// module.exports = {readExcelFile};
