@@ -3,11 +3,10 @@ import { fetchAudioData } from './fetchData.js';
 
 const args = process.argv.slice(2);
 const filePath = args[0];
-let promiseAll = [];
+const chunkSize = args[1] ?? 10;
 
 readTxtFile(filePath).then((rows) => {
   if (rows) {
-    const chunkSize = 10;
     for (let i = 0; i < rows.length; i += chunkSize) {
       let promiseAll = [];
       const chunk = rows.slice(i, i + chunkSize);
