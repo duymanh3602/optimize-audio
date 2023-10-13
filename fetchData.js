@@ -31,7 +31,7 @@ export async function fetchAudioData(url) {
       });
   })
   .catch(error => {
-    console.error('Error fetching audio file:', error);
+    console.error('Error fetching audio file: ', fileName);
   });
 }
 
